@@ -11,7 +11,7 @@ export default function FinalCTA() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          
+          <a
             href="https://ideoloop-webapp.web.app"
             className="px-8 py-4 bg-primary text-white rounded-full font-medium text-lg hover:bg-primary-light transition-colors shadow-lg hover:shadow-xl"
           >

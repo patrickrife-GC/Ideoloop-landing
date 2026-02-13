@@ -8,8 +8,8 @@ export default function Navigation() {
           </div>
           <span className="font-bold text-lg text-gray-900">Ideoloop</span>
         </div>
-        
-        
+
+        <a
           href="#start"
           className="px-6 py-2 bg-primary text-white rounded-full text-sm font-medium hover:bg-primary-light transition-colors"
         >
