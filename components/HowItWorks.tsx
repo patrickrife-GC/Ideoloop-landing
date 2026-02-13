@@ -16,51 +16,37 @@ const steps = [
   {
     number: 3,
     title: 'Share Everywhere',
-    description: 'Get ready-to-post content for LinkedIn, Twitter, email, and more. All in
-cat > components/Benefits.tsx << 'EOF'
-import { Check } from 'lucide-react'
-
-const benefits = [
-  {
-    title: 'Sounds Like You',
-    description: 'AI preserves your actual voice and perspective, not generic templates. Your ideas, your tone.',
-  },
-  {
-    title: 'Save Hours Weekly',
-    description: '10 minutes of conversation = 5+ pieces of ready-to-share content. No endless editing.',
-  },
-  {
-    title: 'Multi-Platform Ready',
-    description: 'LinkedIn posts, tweets, newsletter angles, blog intros—all formatted and optimized.',
-  },
-  {
-    title: 'Stay On Brand',
-    description: 'Consistency across platforms automatically. You sound like you everywhere.',
+    description: 'Get ready-to-post content for LinkedIn, Twitter, email, and more. All in your authentic voice.',
+    icon: Share2,
   },
 ]
 
-export default function Benefits() {
+export default function HowItWorks() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-16">
-          Why Creators Choose Ideoloop
+        <h2 className="text-3xl font-bold text-gray-900 text-center mb-4">
+          How It Works
         </h2>
+        <p className="text-gray-600 text-center mb-16 max-w-2xl mx-auto">
+          Three simple steps from thought to content
+        </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="flex gap-4">
-              <div className="w-6 h-6 rounded-lg bg-primary flex items-center justify-center flex-shrink-0 mt-1">
-                <Check className="w-4 h-4 text-white" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          {steps.map((step) => (
+            <div key={step.number} className="text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <step.icon className="w-8 h-8 text-primary" />
               </div>
-              <div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {benefit.description}
-                </p>
+              <div className="text-sm font-semibold text-primary mb-2">
+                Step {step.number}
               </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                {step.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {step.description}
+              </p>
             </div>
           ))}
         </div>
