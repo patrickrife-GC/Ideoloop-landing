@@ -36,91 +36,97 @@ export default function Hero() {
         {/* App preview mockup */}
         <div className="animate-float max-w-4xl mx-auto">
           <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
-            {/* Window chrome */}
-            <div className="bg-primary px-5 py-3.5 flex items-center gap-3">
+
+            {/* Top bar */}
+            <div className="bg-primary px-5 py-3 flex items-center gap-3">
               <div className="flex gap-1.5">
                 <div className="w-3 h-3 rounded-full bg-white/25" />
                 <div className="w-3 h-3 rounded-full bg-white/25" />
                 <div className="w-3 h-3 rounded-full bg-white/25" />
               </div>
-              <span className="text-white/80 text-sm font-medium mx-auto">Ideoloop — Active Session</span>
+              <span className="text-white/70 text-sm font-medium mx-auto">Ideoloop</span>
             </div>
 
-            {/* Two-panel layout */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-gray-100">
-              {/* Left: Conversation */}
-              <div className="p-6">
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Your Session</p>
-                <div className="bg-gray-50 rounded-xl p-4 mb-3 border border-gray-100">
-                  <p className="text-xs text-gray-400 mb-1.5 font-medium">Question</p>
-                  <p className="text-sm text-gray-700 leading-relaxed">
-                    What's one insight from your work that more people should know about?
-                  </p>
+            <div className="grid grid-cols-1 sm:grid-cols-5 divide-y sm:divide-y-0 sm:divide-x divide-gray-100">
+
+              {/* Left panel: Lens selection (2 cols) */}
+              <div className="sm:col-span-2 p-5 bg-gray-50/60">
+                <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-widest mb-3">Choose a Lens</p>
+                <div className="space-y-2">
+
+                  {/* Selected lens */}
+                  <div className="bg-white rounded-xl p-3.5 border-2 border-primary shadow-sm">
+                    <div className="flex items-start gap-3">
+                      <span className="text-xl leading-none mt-0.5">🎯</span>
+                      <div>
+                        <p className="text-sm font-semibold text-gray-900">The Expert</p>
+                        <p className="text-xs text-gray-500 mt-0.5 leading-relaxed">Share hard-won knowledge and position yourself as a trusted authority.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-3.5 border border-gray-200">
+                    <div className="flex items-start gap-3">
+                      <span className="text-xl leading-none mt-0.5">📖</span>
+                      <div>
+                        <p className="text-sm font-semibold text-gray-900">The Storyteller</p>
+                        <p className="text-xs text-gray-500 mt-0.5 leading-relaxed">Lead with a personal narrative that makes your insight memorable.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-3.5 border border-gray-200">
+                    <div className="flex items-start gap-3">
+                      <span className="text-xl leading-none mt-0.5">⚡</span>
+                      <div>
+                        <p className="text-sm font-semibold text-gray-900">The Challenger</p>
+                        <p className="text-xs text-gray-500 mt-0.5 leading-relaxed">Push back on the conventional take and spark a real conversation.</p>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
+              </div>
+
+              {/* Right panel: Active session (3 cols) */}
+              <div className="sm:col-span-3 p-5 flex flex-col gap-4">
+                <div className="flex items-center justify-between">
+                  <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-widest">Session · The Expert</p>
+                  <span className="text-[11px] text-gray-400">Q 2 of 4</span>
+                </div>
+
+                {/* Question */}
                 <div className="bg-primary/5 rounded-xl p-4 border border-primary/10">
-                  <p className="text-xs text-primary mb-1.5 font-medium">Your response</p>
-                  <p className="text-sm text-gray-700 leading-relaxed">
-                    "Most people overcomplicate strategy. The best plans I've seen fit on one page — and the best leaders can explain their vision in a single sentence..."
+                  <p className="text-xs font-medium text-primary mb-1.5">Question</p>
+                  <p className="text-sm text-gray-800 leading-relaxed font-medium">
+                    What's one thing you know now that you wish you'd learned 5 years earlier in your field?
                   </p>
                 </div>
-                <div className="mt-4 flex items-center gap-2">
-                  <div className="flex-1 h-1.5 bg-primary/20 rounded-full overflow-hidden">
-                    <div className="w-3/4 h-full bg-primary rounded-full" />
+
+                {/* Response */}
+                <div className="flex-1">
+                  <p className="text-xs font-medium text-gray-400 mb-2">Your answer</p>
+                  <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 min-h-24">
+                    <p className="text-sm text-gray-700 leading-relaxed">
+                      That relationships compound faster than skills. I spent years optimising for getting better at my craft — and that matters — but the biggest leaps came when I invested in the people around me...
+                    </p>
+                    <span className="inline-block w-0.5 h-4 bg-primary animate-pulse ml-0.5 align-middle" />
                   </div>
-                  <span className="text-xs text-gray-400">3 of 4 questions</span>
+                </div>
+
+                {/* Progress */}
+                <div className="flex items-center gap-3">
+                  <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                    <div className="w-1/2 h-full bg-primary rounded-full" />
+                  </div>
+                  <span className="text-xs text-gray-400 whitespace-nowrap">2 of 4</span>
                 </div>
               </div>
 
-              {/* Right: Generated content */}
-              <div className="p-6">
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Generated for You</p>
-                <div className="space-y-3">
-                  {/* LinkedIn */}
-                  <div className="bg-blue-50 rounded-xl p-3.5 border border-blue-100">
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-5 h-5 bg-blue-600 rounded flex items-center justify-center flex-shrink-0">
-                        <span className="text-white text-[9px] font-bold">in</span>
-                      </div>
-                      <span className="text-xs font-semibold text-blue-700">LinkedIn Post</span>
-                      <span className="ml-auto text-xs text-blue-400 bg-blue-100 px-2 py-0.5 rounded-full">Ready</span>
-                    </div>
-                    <p className="text-xs text-gray-600 leading-relaxed">
-                      After a decade in leadership, here's what I wish I knew sooner: the best strategies fit on one page. If you can't explain it simply, it's not ready...
-                    </p>
-                  </div>
-
-                  {/* Twitter */}
-                  <div className="bg-slate-50 rounded-xl p-3.5 border border-slate-200">
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-5 h-5 bg-slate-800 rounded flex items-center justify-center flex-shrink-0">
-                        <span className="text-white text-[9px] font-bold">𝕏</span>
-                      </div>
-                      <span className="text-xs font-semibold text-slate-700">Twitter / X</span>
-                      <span className="ml-auto text-xs text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full">Ready</span>
-                    </div>
-                    <p className="text-xs text-gray-600 leading-relaxed">
-                      Most people overcomplicate strategy. The best plans fit on one page. Here's the framework I use →
-                    </p>
-                  </div>
-
-                  {/* Newsletter */}
-                  <div className="bg-amber-50 rounded-xl p-3.5 border border-amber-100">
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-5 h-5 bg-amber-500 rounded flex items-center justify-center flex-shrink-0">
-                        <span className="text-white text-[9px]">✉</span>
-                      </div>
-                      <span className="text-xs font-semibold text-amber-700">Newsletter Angle</span>
-                      <span className="ml-auto text-xs text-amber-400 bg-amber-100 px-2 py-0.5 rounded-full">Ready</span>
-                    </div>
-                    <p className="text-xs text-gray-600 leading-relaxed">
-                      This week: why simplicity is the hardest strategic skill — and how to know if your plan is really done...
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   )
