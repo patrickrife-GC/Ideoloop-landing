@@ -18,8 +18,8 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4">Product</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">How it works</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="#how-it-works" className="hover:text-white transition-colors">How it works</a></li>
+              <li><a href="#benefits" className="hover:text-white transition-colors">Benefits</a></li>
               <li><a href="#" className="hover:text-white transition-colors">FAQ</a></li>
             </ul>
           </div>
@@ -34,7 +34,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-8 text-center text-sm">
-          <p>&copy; 2024 Ideoloop. All rights reserved.</p>
+          <p>&copy; 2026 Ideoloop. All rights reserved.</p>
         </div>
       </div>
     </footer>

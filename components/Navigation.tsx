@@ -9,6 +9,12 @@ export default function Navigation() {
           <span className="font-bold text-lg text-gray-900">Ideoloop</span>
         </div>
 
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-500">
+          <a href="#how-it-works" className="hover:text-gray-900 transition-colors">How It Works</a>
+          <a href="#benefits" className="hover:text-gray-900 transition-colors">Benefits</a>
+          <a href="#testimonials" className="hover:text-gray-900 transition-colors">Testimonials</a>
+        </div>
+
         <a
           href="#start"
           className="px-6 py-2 bg-primary text-white rounded-full text-sm font-medium hover:bg-primary-light transition-colors"
