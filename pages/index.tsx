@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
+import Stats from '@/components/Stats'
 import Testimonials from '@/components/Testimonials'
 import HowItWorks from '@/components/HowItWorks'
 import Benefits from '@/components/Benefits'
@@ -16,9 +17,10 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <Navigation />
       <Hero />
-      <Testimonials />
+      <Stats />
       <HowItWorks />
       <Benefits />
+      <Testimonials />
       <FinalCTA />
       <Footer />
     </main>
