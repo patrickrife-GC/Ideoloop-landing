@@ -1,23 +1,26 @@
-import { Mic, Zap, Share2 } from 'lucide-react'
+import Image from 'next/image'
 
 const steps = [
   {
     number: 1,
-    title: 'Have a Conversation',
-    description: 'Answer a few reflective questions about your perspective, experience, or insights. Takes about 10 minutes.',
-    icon: Mic,
+    title: 'Press Record. Start Talking.',
+    description: 'Answer a few guided questions about your perspective, experience, or what\'s on your mind. Takes about 10 minutes. No script. No blank page.',
+    image: '/assets/ui-record-screen.png',
+    imageDark: true,
   },
   {
     number: 2,
-    title: 'We Map Your Voice',
-    description: 'Our AI extracts your unique themes, tone, and ideas. No generic output—just you, distilled.',
-    icon: Zap,
+    title: 'Choose Your Lens.',
+    description: 'Pick the type of insight you want to extract — a win, a hard lesson, a half-baked idea. Ideoloop guides you through a specific 3-question sequence designed to pull out the good stuff.',
+    image: '/assets/ui-select-lens.png',
+    imageDark: false,
   },
   {
     number: 3,
-    title: 'Share Everywhere',
-    description: 'Get ready-to-post content for LinkedIn, Twitter, email, and more. All in your authentic voice.',
-    icon: Share2,
+    title: 'Here\'s What We Made.',
+    description: 'Your conversation becomes ready-to-share content across LinkedIn, X, your newsletter, and more — all in your authentic voice. Copy, edit, publish.',
+    image: '/assets/ui-output-dashboard.png',
+    imageDark: false,
   },
 ]
 
@@ -29,25 +32,36 @@ export default function HowItWorks() {
           How It Works
         </h2>
         <p className="text-gray-500 text-center mb-16 max-w-2xl mx-auto">
-          Three simple steps from thought to content
+          Three steps from thought to content.
         </p>
 
-        <div className="relative grid grid-cols-1 md:grid-cols-3 gap-12">
-          {/* Connecting line (desktop only) */}
-          <div className="hidden md:block absolute top-10 h-px bg-gray-200" style={{ left: '22%', right: '22%' }} />
-
-          {steps.map((step) => (
-            <div key={step.number} className="text-center relative">
-              <div className="relative inline-block mb-6">
-                <div className="w-20 h-20 bg-primary/8 rounded-2xl flex items-center justify-center mx-auto">
-                  <step.icon className="w-9 h-9 text-primary" />
-                </div>
-                <div className="absolute -top-2 -right-2 w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-                  <span className="text-white text-xs font-bold">{step.number}</span>
+        <div className="space-y-20">
+          {steps.map((step, index) => (
+            <div
+              key={step.number}
+              className={`flex flex-col ${index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-10 md:gap-16`}
+            >
+              {/* Screenshot */}
+              <div className="w-full md:w-1/2 flex-shrink-0">
+                <div className={`rounded-2xl overflow-hidden shadow-xl ${step.imageDark ? 'border-2 border-gray-700' : 'border border-gray-200'}`}>
+                  <Image
+                    src={step.image}
+                    alt={step.title}
+                    width={800}
+                    height={520}
+                    className="w-full h-auto"
+                  />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
-              <p className="text-gray-500 leading-relaxed">{step.description}</p>
+
+              {/* Copy */}
+              <div className="w-full md:w-1/2">
+                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center mb-4">
+                  <span className="text-white text-sm font-bold">{step.number}</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{step.title}</h3>
+                <p className="text-gray-500 leading-relaxed text-lg">{step.description}</p>
+              </div>
             </div>
           ))}
         </div>

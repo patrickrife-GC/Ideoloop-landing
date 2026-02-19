@@ -1,4 +1,4 @@
-import { Fingerprint, Clock, Layers, RefreshCw } from 'lucide-react'
+import { Fingerprint, Clock, Layers, TrendingUp } from 'lucide-react'
 
 const benefits = [
   {
@@ -18,14 +18,14 @@ const benefits = [
   {
     icon: Layers,
     title: 'Multi-Platform Ready',
-    description: 'LinkedIn posts, tweets, newsletter angles, blog intros—all formatted and optimized for each platform automatically.',
+    description: 'LinkedIn posts, tweets, newsletter angles, blog intros — all formatted and optimized for each platform automatically.',
     color: 'bg-blue-50 text-blue-600',
     border: 'border-blue-100',
   },
   {
-    icon: RefreshCw,
-    title: 'Stay On Brand',
-    description: 'Consistency across platforms, automatically. You build a coherent presence without the manual effort.',
+    icon: TrendingUp,
+    title: 'Gets Smarter Over Time',
+    description: 'Every session teaches Ideoloop more about your voice, your themes, and your thinking. The longer you use it, the better it gets.',
     color: 'bg-emerald-50 text-emerald-600',
     border: 'border-emerald-100',
   },
@@ -36,10 +36,10 @@ export default function Benefits() {
     <section id="benefits" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-gray-900 text-center mb-4">
-          Why Creators Choose Ideoloop
+          Why Ideoloop
         </h2>
         <p className="text-gray-500 text-center mb-16 max-w-xl mx-auto">
-          Everything you need to turn your expertise into consistent, authentic content
+          Everything you need to turn your expertise into consistent, authentic content.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
